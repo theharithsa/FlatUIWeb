@@ -1,0 +1,641 @@
+/*
+Tutorial Name: CSS3 Hover Link Effects
+Author: Samuel Dalusung
+*/
+
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+html, 
+body{
+margin: 0;
+padding: 0;
+}
+
+#container-1{
+background: #314559;
+width: 100%;
+height: auto;
+}
+
+
+
+h1, h2, h3{
+    text-align: center;
+
+}
+
+h1{
+    font-family: 'Francois One', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 52px;
+    padding: 110px 0 20px 0;
+    color: #fff;
+
+}
+
+h3{
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    color: #9f9e9b;
+    margin-bottom: 23px;
+}
+
+
+
+
+a.back{
+  font-family: 'Lato', Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 16px;
+  color: #fff;
+  padding: 15px 10px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px auto;
+  width: 15%;
+  display: block;
+}
+
+
+
+a.back:hover{
+background: #5f6f81;
+color: #fff;
+}
+
+
+/* LINK GROUP
+-------------------------------------------------*/
+
+.link-group-1{
+  background: #4E86BF;
+  padding: 6.04% 0 9.5% 0;
+  margin-top: 80px;
+  text-align: center;
+}
+
+
+.link-group-2{
+  background: #8e44ad;
+   padding: 6.04% 0 9% 0;
+  margin-top: 80px;
+  height: auto;
+  text-align: center;
+}
+
+.link-group-3{
+  padding: 5.08% 0 10.5% 0;
+  background: #2ecc71;
+  margin-top: 80px;
+  height: auto;
+  text-align: center;
+}
+
+
+
+.link-group-4{
+  background: #e74c3c;
+   padding: 6.04% 0 11.3% 0;
+  margin-top: 80px;
+  height: auto;
+  text-align: center;
+}
+
+
+i{ margin-right: 8px;}
+
+nav { display: inline-block; }
+
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 28px;
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+nav a:hover,
+nav a:focus {
+  outline: none;
+}
+
+
+/* DEMO 1
+-------------------------------------------------*/
+
+.box{
+  color: #fff;
+  padding: 10px;
+}
+
+.box:hover{
+  background: #fff;
+  color: #26425E;
+}
+
+
+.demo-1 {
+  position: relative;
+}
+
+.demo-1:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.2s;
+
+
+  -webkit-transition-property: top, left, right, bottom;
+  -moz-transition-property: top, left, right, bottom;
+  -ms-transition-property: top, left, right, bottom;
+  -o-transition-property: top, left, right, bottom;
+  transition-property: top, left, right, bottom;
+
+
+}
+
+.demo-1:hover:before, .demo-1:focus:before{
+  -webkit-transition-delay: .1s; 
+  -moz-transition-delay: .1s; 
+  -ms-transition-delay: .1s; 
+  -o-transition-delay: .1s; 
+  transition-delay: .1s; 
+
+  border: #fff solid 3px;
+  bottom: -7px;
+  left: -7px;
+  top: -7px;
+  right: -7px;
+}
+
+
+
+
+
+/* DEMO 2
+-------------------------------------------------*/
+
+
+.demo-2{
+  color: #314559;
+  padding: 10px 0;
+}
+
+
+.demo-2::before {
+  color: #fff;
+  max-width: 0;
+  padding: 10px 0;
+  border-top: 1px dashed #fff;
+  border-bottom: 1px dashed #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  content: attr(data-text);
+  -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+}
+
+
+.demo-2:hover::before,
+.demo-2:focus::before {
+  max-width: 100%;
+  outline: none;
+  text-shadow: none;
+}
+
+
+
+
+/* DEMO 3 : Inspired by http://zerosixthree.se/snippets/css-3d-link-hover-effect/
+-------------------------------------------------*/
+
+ .demo-3 {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  overflow: hidden;
+  vertical-align: top;
+   background: #1C3044;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+ .demo-3:hover span {
+  background: #314559;
+  -webkit-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+  -moz-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+  -ms-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+  transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+}
+  .demo-3 span {
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+ .demo-3 span:after {
+  content: attr(data-text);
+  -webkit-font-smoothing: antialiased;
+  padding: 10px 20px;
+  color: #fff;
+  background: #0e6957; 
+  display: block;
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+  -moz-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+  -ms-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+  transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+}
+
+
+
+/* DEMO 4
+-------------------------------------------------*/
+
+.demo-4 {
+  width: 210px;   
+  background-color: transparent;    
+  cursor: pointer;  
+  border-color: #bdc3c7; 
+}
+
+.demo-4:hover {
+  border-color: #C672E9;  
+}
+
+
+.demo-4 span:nth-child(1) {
+  color: #FCFCFC; 
+}
+
+
+.demo-4 span:nth-child(2) {
+  color: #C672E9; 
+}
+
+
+.demo-4 span {
+  font-family: 'Lato', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+
+.demo-4 {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  border-style: none;
+  height: 65px;
+  display: inline-block;
+}
+
+
+.demo-4 span {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+}
+
+
+.demo-4>span>span:nth-child(3), .demo-4:before, .demo-4:after, .demo-4>:first-child, .demo-4>:first-child:before, .demo-4>:first-child:after {
+  border-color: inherit;
+  display: block;
+  -moz-transition: border-color 0.3s ease;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+
+
+.demo-4:before, .demo-4:after, .demo-4>:first-child:before, .demo-4>:first-child:after {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+}
+
+.demo-4>span>span:nth-child(3), .demo-4:before, .demo-4:after, .demo-4>:first-child:before, .demo-4>:first-child:after {
+  border-width: 3px;
+}
+.demo-4>span>span:nth-child(3) {
+  border-radius: 3px;
+}
+.demo-4:before {
+  border-radius: 3px 0 0 3px;
+}
+.demo-4:after {
+  border-radius: 0 3px 3px 0;
+}
+.demo-4>:first-child:before {
+  border-radius: 3px 3px 0 0;
+}
+.demo-4>:first-child:after {
+  border-radius: 0 0 3px 3px;
+}
+
+.demo-4>:first-child {
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+}
+.demo-4>span span {
+  width: inherit;
+  text-align: center;
+  -moz-transition: opacity 0.6s ease, top 0.5s ease;
+  -webkit-transition: opacity 0.6s ease, top 0.5s ease;
+  transition: opacity 0.6s ease, top 0.5s ease;
+}
+.demo-4>span>span:nth-child(1) {
+  opacity: 1;
+  top: 18px;
+}
+.demo-4>span>span:nth-child(2) {
+  top: 37px;
+  opacity: 0;
+}
+.demo-4:hover>span>span:nth-child(1) {
+  opacity: 0;
+  top: 2px;
+}
+.demo-4:hover>span>span:nth-child(2){
+  opacity: 1;
+  top: 18px;
+}
+
+.demo-4>span>span:nth-child(3) {
+  top: 28%;
+  height: 44%;
+  width: inherit;
+  border-style: none solid none solid;
+}
+
+
+.demo-4:before, .demo-4:after {
+  top: 0;
+  width: 0;
+  height: inherit;
+  border-style: solid none solid none;
+}
+
+.demo-4>:first-child:before, .demo-4>:first-child:after {
+  left: 0;
+  height: 0;
+  width: inherit;
+  border-style: none solid none solid;
+}
+
+.demo-4:before {
+  -webkit-animation-name: left-center;
+  animation-name: left-center;
+}
+
+.demo-4:after {
+  -webkit-animation-name: right-center;
+  animation-name: right-center;
+}
+
+.demo-4>:first-child:before {
+  -webkit-animation-name: center-top;
+  animation-name: center-top;
+}
+
+.demo-4>:first-child:after {
+  -webkit-animation-name: center-bottom;
+  animation-name: center-bottom;
+}
+
+.demo-4:hover:before {
+  -webkit-animation-name: center-left;
+  animation-name: center-left;
+}
+
+.demo-4:hover:after {
+  -webkit-animation-name: center-right;
+  animation-name: center-right;
+}
+
+.demo-4:hover>:first-child:before {
+  -webkit-animation-name: top-center;
+  animation-name: top-center;
+}
+
+.demo-4:hover>:first-child:after {
+  -webkit-animation-name: bottom-center;
+  animation-name: bottom-center;
+}
+
+
+
+@-webkit-keyframes center-left {
+    0%   {left: 40%; width: 8%; opacity: 0.2;}
+    25%  {left: 25%; width: 15%;}
+    50%  {left: 0%; width: 30%;}
+    80%  {left: 0%; width: 0%;}
+    100% {left: 0%; width: 0%; opacity: 1;}
+}
+
+@-webkit-keyframes left-center {
+    0%   {left: 0%; width: 0%; opacity: 1;}
+    20%  {left: 0%; width: 0%;}
+    50%  {left: 0%; width: 30%;}
+    55%  {left: 40%; width: 11%;}
+    100% {left: 43%; width: 8%; opacity: 0.2;}
+}
+
+@-webkit-keyframes center-right {
+    0%   {left: 52%; width: 8%; opacity: 0.2;}
+    25%  {left: 60%; width: 15%;}
+    50%  {left: 70%; width: 30%;}
+    80%  {left: 100%; width: 0%;}
+    100% {left: 100%; width: 0%; opacity: 1;}
+}
+
+@-webkit-keyframes right-center {
+    0%   {left: 100%; width: 0%; opacity: 1;}
+    20%  {left: 100%; width: 0%;}
+    50%  {left: 70%; width: 30%;}
+    55%  {left: 49%; width: 11%;}
+    100% {left: 49%; width: 8%; opacity: 0.2;}
+}
+
+@-webkit-keyframes top-center {
+    0%   {top: 0%; height: 0%; opacity: 0.2;}
+    50%  {top: 0%; height: 0%;}
+    60%  {top: 0%; height: 20%;}
+    80%  {top: 0%; height: 50%;}
+    90%  {top: 25%; height: 25%;}
+    100% {top: 50%; height: 0%; opacity: 1;}
+}
+@-webkit-keyframes center-top {
+    0%   {top: 50%; height: 0%; opacity: 1;}
+    10%  {top: 25%; height: 25%;}
+    20%  {top: 0%; height: 50%;}
+    40%  {top: 0%; height: 20%;}
+    50%  {top: 0%; height: 0%;}
+    100% {top: 0%; height: 0%; opacity: 0.2;}
+}
+
+@-webkit-keyframes bottom-center {
+    0%   {top: 100%; height: 0%; opacity: 0.2;}
+    50%  {top: 100%; height: 0%;}
+    60%  {top: 80%; height: 20%;}
+    80%  {top: 50%; height: 50%;}
+    90%  {top: 50%; height: 25%;}
+    100% {top: 50%; height: 0%; opacity: 1;}
+}
+@-webkit-keyframes center-bottom {
+    0%   {top: 50%; height: 0%; opacity: 1;}
+    10%  {top: 50%; height: 25%;}
+    20%  {top: 50%; height: 50%;}
+    40%  {top: 80%; height: 20%;}
+    50%  {top: 100%; height: 0%;}
+    100% {top: 100%; height: 0%; opacity: 0.2;}
+}
+
+
+
+@keyframes center-left {
+    0%   {left: 40%; width: 8%; opacity: 0.2;}
+    25%  {left: 25%; width: 15%;}
+    50%  {left: 0%; width: 30%;}
+    80%  {left: 0%; width: 0%;}
+    100% {left: 0%; width: 0%; opacity: 1;}
+}
+
+@keyframes left-center {
+    0%   {left: 0%; width: 0%; opacity: 1;}
+    20%  {left: 0%; width: 0%;}
+    50%  {left: 0%; width: 30%;}
+    55%  {left: 40%; width: 11%;}
+    100% {left: 43%; width: 8%; opacity: 0.2;}
+}
+
+@keyframes center-right {
+    0%   {left: 52%; width: 8%; opacity: 0.2;}
+    25%  {left: 60%; width: 15%;}
+    50%  {left: 70%; width: 30%;}
+    80%  {left: 100%; width: 0%;}
+    100% {left: 100%; width: 0%; opacity: 1;}
+}
+
+@keyframes right-center {
+    0%   {left: 100%; width: 0%; opacity: 1;}
+    20%  {left: 100%; width: 0%;}
+    50%  {left: 70%; width: 30%;}
+    55%  {left: 49%; width: 11%;}
+    100% {left: 49%; width: 8%; opacity: 0.2;}
+}
+
+@keyframes top-center {
+    0%   {top: 0%; height: 0%; opacity: 0.2;}
+    50%  {top: 0%; height: 0%;}
+    60%  {top: 0%; height: 20%;}
+    80%  {top: 0%; height: 50%;}
+    90%  {top: 25%; height: 25%;}
+    100% {top: 50%; height: 0%; opacity: 1;}
+}
+@keyframes center-top {
+    0%   {top: 50%; height: 0%; opacity: 1;}
+    10%  {top: 25%; height: 25%;}
+    20%  {top: 0%; height: 50%;}
+    40%  {top: 0%; height: 20%;}
+    50%  {top: 0%; height: 0%;}
+    100% {top: 0%; height: 0%; opacity: 0.2;}
+}
+
+@keyframes bottom-center {
+    0%   {top: 100%; height: 0%; opacity: 0.2;}
+    50%  {top: 100%; height: 0%;}
+    60%  {top: 80%; height: 20%;}
+    80%  {top: 50%; height: 50%;}
+    90%  {top: 50%; height: 25%;}
+    100% {top: 50%; height: 0%; opacity: 1;}
+}
+@keyframes center-bottom {
+    0%   {top: 50%; height: 0%; opacity: 1;}
+    10%  {top: 50%; height: 25%;}
+    20%  {top: 50%; height: 50%;}
+    40%  {top: 80%; height: 20%;}
+    50%  {top: 100%; height: 0%;}
+    100% {top: 100%; height: 0%; opacity: 0.2;}
+}
+
+
+
+
+/* RESPONSIVE MEDIA QUERIES
+-------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+.demo-1 a,.demo-2 a,.demo-3 a,.demo-4 a {
+    margin-top:40px
+}
+}
+
+
+
+@media screen and (max-width: 320px) {
+h3 {
+    font-size:20px
+}
+
+a.next {
+    display:none
+}
+
+a.back {
+    width:75%;
+    text-align:center;
+    padding:20px 0;
+    display: block;
+}
+}
